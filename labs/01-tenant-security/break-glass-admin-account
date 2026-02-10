@@ -1,0 +1,53 @@
+Break-glass admin account overview:
+---
+Purpose:
+  This admin account is a highly-privileged account that is used in emergencies (hence the "break-glass" name) that is only used when standard admin accounts are experiencing issues.
+  This account ensures business continuity while also working to mitigate the elevated risk associated with an account at this level.
+---
+Account:
+  Type:
+    -Cloud-only user
+    -Role: Global Admin
+    -Not synced from on-prem AD
+  Name:
+    -bg-admin@<redacted_tenant_name>.onmicrosoft.com
+    -The naming of this account helps to mitigate accidental use of the account
+---
+Security Configuration:
+  Password:
+    -Length: 24+ characters
+    -Randomly generated
+    -Stored in an offline password vault
+    -Roatated every 90 days
+    *The length of this password and the password rules help to mitigate cyber risks of this highly privleged account
+  *Excluded from MFA to ensure an account can get into the service during MFA service outages
+---
+Operational Rules:
+  -No routine use
+  -Not used for testing
+  -Only used during designated emergencies
+---
+Emergency Usage (Examples):
+  -MFA service outage
+  -Conditional Access policy blocks all admins
+  -Corrupted admin accounts
+---
+Monitoring & Auditing
+  Logs
+    -All sign ins are monitored via: EntraID sign-in logs and audit logs
+  Alerts
+    -Alert is triggered with any sign-in attempt
+    -These alerts are required to be reviewed by the security team as soon as possible
+---
+Risk Assessment:
+  Identified Risk:
+    -Excluding this account from MFA rules increases the chance for a cyberattack if credentials are exposed
+  Risk Mitigation:
+    -Strong password with regular rotation
+    -Offline password storage
+    -Continuous monitoring and alerting
+    -Regular account log audits
+  Risk Acceptance:
+    -The fictional organization would accept the risk associated with creating the break-glass account due to the following:
+      -Reduced liklihood of tenant lockout
+      -Aligned with Microsoft and Zero Trust guidance
