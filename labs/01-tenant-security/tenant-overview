@@ -1,0 +1,12 @@
+The first thing to be done after creating an EntraID tenant is to secure it. 
+It is critical to ensure that the tenant created is secured and has security policies put into place to prevent cyberattacks. 
+
+First we will go to the Entra Admin Center -> Overview and verify the following:
+  The tenant name
+  The primary domain (onmicrosoft.com)
+  The Tenant ID 
+
+You can also add a company domain by going to Identity -> Settings -> Custom domain names
+  From here you will add the domain
+  Verify that you are the domain owner via DNS TXT record
+  Set this as the primary domain
