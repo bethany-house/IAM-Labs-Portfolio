@@ -44,3 +44,19 @@ For each user:
   -No accounts shared between users
   -The account with IT admin credentials was created as a separate account compared to the user's daily account. It is important have these accounts separate so the admin account is only used in situations where admin access is required.
 ---
+**Security Group Creation**
+IAM Concept: RBAC
+RBAC stands for Role Based Access Control where access to tools is assigned to a group and then users are added to those groups based on their role. 
+
+Groups Created:
+  -HR-Users
+  -Finance-Users
+  -IT-Users
+  -IT-Admins
+
+Path: Admin Center -> Groups -> New Group
+
+Configuration: 
+  -Group Type: Security
+  -Membership Type: Assigned
+  -Owners Assigned (part of best practice)
