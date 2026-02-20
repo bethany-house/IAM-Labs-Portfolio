@@ -15,3 +15,32 @@ There are three new users joining the organization (note these users are fictici
   - Denise Sutton: Talent Acquisition Specialist
   - Lily Polk: System Support Specialist
 These three users will need corporate accounts along with being added to the correct security group.
+---
+**IAM Concept: Joiner**
+A "Joiner" is the process taken to onboard a new employee and granting the necessary permissions to allow them to do their job while also exercising the principle of least privilege.
+
+**Creating Users**
+*Note, please see the Screenshots folder for pictures regarding this process
+
+Standard Users:
+  -agrey@tenant.onmicrosoft.com
+  -dsutton@tenant.onmicrosoft.com
+  -lpolk@tenant.onmicrosoft.com
+
+IT Admin User:
+  -polkl@tenant.onmicrosoft.com
+
+**Configuration Steps**
+Path: EntraID Admin Center -> Users -> New User
+
+For each user: 
+  -Identity type: Cloud-only
+  -Assigned location
+  -Temporary password generated
+  -Require the password to be changed during the first login
+
+**Security Considerations**
+  -Unique credentials for each user
+  -No accounts shared between users
+  -The account with IT admin credentials was created as a separate account compared to the user's daily account. It is important have these accounts separate so the admin account is only used in situations where admin access is required.
+---
