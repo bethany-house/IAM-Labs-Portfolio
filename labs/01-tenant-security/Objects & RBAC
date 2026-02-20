@@ -1,0 +1,17 @@
+**Entra ID Objects and Role Based Access Control (RBAC)**
+
+**Objective:**
+Showcase the joiner part of identity lifecycle management and Role-Based Access Control (RBAC) using Microsoft Entra ID.
+
+**This lab showcases:**
+  -Manual user povisioning (joiner process)
+  -Security group creation
+  -Group-based access control
+  -Role delegation using the principle of least privilege
+---
+**Scenario:**
+There are three new users joining the organization (note these users are ficticious and not based on any singular person(s)):
+  - Adam Grey: Controller
+  - Denise Sutton: Talent Acquisition Specialist
+  - Lily Polk: System Support Specialist
+These three users will need corporate accounts along with being added to the correct security group.
